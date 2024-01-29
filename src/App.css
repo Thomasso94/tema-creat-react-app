@@ -1,38 +1,113 @@
+:root {
+  --blue: #004aad;
+  --white: #fff;
+  --grey: #e7e7e7;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+.App .app-row {
+  display: flex;
+}
+
+.App .cars-header {
+  height: 100px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  width: 100%;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background-color: var(--blue);
+}
+
+.App .cars-header img {
+  height: 100%;
+}
+
+.App .cars-header h1 {
+  color: var(--white);
+}
+
+.App .cars-sidebar {
+  width: 300px;
+  min-height: 770px;
+  padding: 30px;
+  background-color: var(--grey);
+}
+
+.App .cars-sidebar ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 120px;
+}
+
+.App .cars-sidebar .cars-list-item {
+  padding: 10px 20px;
+  background-color: var(--blue);
+  margin-bottom: 20px;
+  color: var(--white);
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.App .cars-sidebar .cars-list-item a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.App .cars-sidebar .cars-list-item:hover {
+  cursor: pointer;
+  background-color: rgb(141, 228, 147);
+  color: black;
+}
+
+.App .cars-footer {
+  background-color: var(--blue);
+  height: 100px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  color: var(--white);
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App .cars-main-content {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .cars-main-content .cars-card {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  border: 1px solid var(--grey);
+  background-color: var(--grey);
+}
+
+.App .cars-main-content .cars-card img {
+  width: 70%;
+}
+
+.App .cars-main-content .cars-card h2 {
+  font-size: 28px;
+}
+
+.App .cars-main-content .cars-card p {
+  font-size: 28px;
+  font-weight: 800;
 }
